@@ -17,7 +17,7 @@ application: kyorindo-mds {
     use_form_submit: yes
     use_embeds: yes
     core_api_methods: ["all_connections","search_folders", "run_inline_query", "me", "all_looks", "run_look","query_for_slug","look","run_query"]
-    external_api_urls: ["https://as05.jbtob.works/mdsApi","https://as09.jbtob.works/mdsApi"]
+    external_api_urls: ["https://as05.jbtob.works/mdsApi","https://as09.jbtob.works/mdsApi", "https://localhost:8080"]
     scoped_user_attributes: ["mds_client_id","mds_secret_key","top_dashboard_id","mds_dashboard_id"]
     global_user_attributes: ["locale"]
   }
