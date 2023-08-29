@@ -37,10 +37,12 @@ view: fruit_basket {
 
   measure: total_price {
     type: sum
+    value_format_name: usd
     sql: ${price} ;;  }
 
   measure: average_price {
     type: average
+    value_format_name: usd
     sql: ${price} ;;  }
 
   dimension: priceper_pound {
@@ -51,6 +53,12 @@ view: fruit_basket {
   dimension: weight {
     type: number
     sql: ${TABLE}.Weight ;;
+  }
+
+  measure: total_weight {
+    type: sum
+    sql: ${weight} ;;
+    value_format_name: decimal_2
   }
   measure: count {
     type: count
