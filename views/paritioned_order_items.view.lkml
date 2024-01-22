@@ -25,7 +25,7 @@ view: paritioned_order_items {
     sql: ${TABLE}.inventory_item_id ;;
   }
   dimension: order_id {
-    label: "order id"
+    label: "order_id"
     type: number
     sql: ${TABLE}.order_id ;;
   }

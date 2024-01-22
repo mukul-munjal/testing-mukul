@@ -11,6 +11,6 @@
     ],
     "value": "Translation for Comment"
   },
-  "created date": "作成日",
-  "order id": "注文ID"
+  "created": "作成日",
+  "order_id": "注文ID"
 }
