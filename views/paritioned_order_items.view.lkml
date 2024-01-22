@@ -8,7 +8,7 @@ view: paritioned_order_items {
     sql: ${TABLE}.id ;;
   }
   dimension_group: created {
-    label: "created date"
+    label: "created"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.created_at ;;
@@ -25,6 +25,7 @@ view: paritioned_order_items {
     sql: ${TABLE}.inventory_item_id ;;
   }
   dimension: order_id {
+    label: "order id"
     type: number
     sql: ${TABLE}.order_id ;;
   }
