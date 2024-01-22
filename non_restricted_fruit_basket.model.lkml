@@ -9,3 +9,5 @@ explore: fruit_basket {
   # required_access_grants: [explore_access]
   label: "フルーツ"
 }
+
+explore: paritioned_order_items {}
