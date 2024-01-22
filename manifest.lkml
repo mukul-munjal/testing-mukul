@@ -22,3 +22,8 @@ application: kyorindo-mds {
     global_user_attributes: ["locale"]
   }
 }
+
+localization_settings: {
+  default_locale: en
+  localization_level: permissive
+}
