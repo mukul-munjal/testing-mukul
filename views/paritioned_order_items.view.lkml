@@ -8,14 +8,14 @@ view: paritioned_order_items {
     sql: ${TABLE}.id ;;
   }
   dimension_group: created {
-    label: "created"
+    # label: "created"
     type: time
-    timeframes: [raw, time, date, week, month, quarter, year]
+    timeframes: [time, date, week, month, quarter, year, week_of_year]
     sql: ${TABLE}.created_at ;;
   }
   dimension_group: delivered {
     type: time
-    timeframes: [raw, date, week, month, quarter, year]
+    timeframes: [date, week, month, quarter, year]
     convert_tz: no
     datatype: date
     sql: ${TABLE}.delivered_at ;;
@@ -31,7 +31,7 @@ view: paritioned_order_items {
   }
   dimension_group: returned {
     type: time
-    timeframes: [raw, time, date, week, month, quarter, year]
+    timeframes: [time, date, week, month, quarter, year]
     sql: ${TABLE}.returned_at ;;
   }
   dimension: sale_price {
@@ -40,7 +40,7 @@ view: paritioned_order_items {
   }
   dimension_group: shipped {
     type: time
-    timeframes: [raw, date, week, month, quarter, year]
+    timeframes: [date, week, month, quarter, year]
     convert_tz: no
     datatype: date
     sql: ${TABLE}.shipped_at ;;
