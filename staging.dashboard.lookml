@@ -7,7 +7,6 @@
   elements:
   - title: staging
     name: staging
-    model: non_restricted_fruit_basket
     explore: fruit_basket
     type: table
     fields: [fruit_basket.fruit_type, fruit_basket.count]
