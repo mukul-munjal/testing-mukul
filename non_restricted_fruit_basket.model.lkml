@@ -8,6 +8,7 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 explore: fruit_basket {
   # required_access_grants: [explore_access]
   label: "フルーツ"
+  group_label: "フルーツバスケット"
 }
 
 explore: paritioned_order_items {
