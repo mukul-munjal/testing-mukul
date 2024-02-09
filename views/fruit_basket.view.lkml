@@ -61,7 +61,7 @@ view: fruit_basket {
     value_format_name: decimal_2
   }
   measure: count {
-    label: "Number of fruit updated again"
+    label: "Number of fruit updated again!!!!"
     type: count
   }
 }
