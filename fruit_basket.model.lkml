@@ -10,5 +10,5 @@ include: "*.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
 explore: fruit_basket {
   # required_access_grants: [explore_access]
-  group_label: "フルーツバスケット"
+  label: "fruit_basket"
 }

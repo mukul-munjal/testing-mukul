@@ -1,5 +1,6 @@
 # The name of this view in Looker is "Fruit Basket"
 view: fruit_basket {
+  label: "fruit_basket"
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
   sql_table_name: `rie-playground.e_commerce.fruit_basket` ;;
@@ -12,21 +13,25 @@ view: fruit_basket {
     # This dimension will be called "Color" in Explore.
 
   dimension: color {
+    label: "color"
     type: string
     sql: ${TABLE}.Color ;;
   }
 
   dimension: fruit_type {
+    label: "fruit_type"
     type: string
     sql: ${TABLE}.FruitType ;;
   }
 
   dimension: is_round {
+    label: "is_round"
     type: yesno
     sql: ${TABLE}.IsRound ;;
   }
 
   dimension: price {
+    label: "price"
     type: number
     sql: ${TABLE}.Price ;;
   }
@@ -45,23 +50,23 @@ view: fruit_basket {
     value_format_name: usd
     sql: ${price} ;;  }
 
-  dimension: priceper_pound {
-    type: number
-    sql: ${TABLE}.PriceperPound ;;
-  }
+  # dimension: priceper_pound {
+  #   type: number
+  #   sql: ${TABLE}.PriceperPound ;;
+  # }
 
-  dimension: weight {
-    type: number
-    sql: ${TABLE}.Weight ;;
-  }
+  # dimension: weight {
+  #   type: number
+  #   sql: ${TABLE}.Weight ;;
+  # }
 
-  measure: total_weight {
-    type: sum
-    sql: ${weight} ;;
-    value_format_name: decimal_2
-  }
+  # measure: total_weight {
+  #   type: sum
+  #   sql: ${weight} ;;
+  #   value_format_name: decimal_2
+  # }
   measure: count {
-    label: "Number of fruit updated again!!!!"
+    label: "count"
     type: count
   }
 }

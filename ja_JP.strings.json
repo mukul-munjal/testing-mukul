@@ -1,0 +1,9 @@
+{
+  "color": "色",
+  "fruit_type": "フルーツ種類",
+  "is_round": "丸いか？",
+  "price": "値段",
+  "fruit_basket": "フルーツバスケット",
+  "count": "個数",
+  "staging": "統計"
+}
