@@ -23,7 +23,15 @@ application: kyorindo-mds {
   }
 }
 
-localization_settings: {
-  default_locale: en
-  localization_level: permissive
+# localization_settings: {
+#   default_locale: en
+#   localization_level: permissive
+# }
+
+constant: priceper_pound {
+  value: "{% if _user_attributes['locale'] == 'ja_JP' %}
+  ポンドあたり価格
+  {% else %}
+  PricePerPound
+  {% endif %}"
 }

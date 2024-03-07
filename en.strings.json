@@ -1,3 +1,9 @@
 {
-
+  "color": "color",
+  "fruit_type": "Fruit Type",
+  "is_round": "Is Round",
+  "price": "Price",
+  "fruit_basket": "Fruit Basket",
+  "count": "Count",
+  "staging": "Staging"
 }

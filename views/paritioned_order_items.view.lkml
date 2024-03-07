@@ -2,13 +2,36 @@ view: paritioned_order_items {
   sql_table_name: `rie-playground.e_commerce.paritioned_order_items` ;;
   drill_fields: [id]
 
+  parameter: join_test {
+    type: unquoted
+    allowed_value: {
+      label: "order_items_id"
+      value: "order_item"
+    }
+    allowed_value: {
+      label: "inventory_items_id"
+      value: "inventory_item"
+    }
+  }
+
+  dimension: dynamic_dimension {
+    type: string
+    sql: {% if paritioned_order_items.join_test._parameter_value == 'order_item' %}
+          ${id}
+         {% elsif paritioned_order_items.join_test._parameter_value == 'inventory_item' %}
+          ${inventory_items.id}
+         {% endif %}
+    ;;
+  }
+
   dimension: id {
+    label: "1. ID"
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
   }
   dimension_group: created {
-    # label: "created"
+    label: "created"
     type: time
     timeframes: [time, date, week, month, quarter, year, week_of_year]
     sql: ${TABLE}.created_at ;;
@@ -21,6 +44,7 @@ view: paritioned_order_items {
     sql: ${TABLE}.delivered_at ;;
   }
   dimension: inventory_item_id {
+    label: "2. ID"
     type: number
     sql: ${TABLE}.inventory_item_id ;;
   }

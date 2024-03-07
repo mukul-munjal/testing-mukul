@@ -50,10 +50,11 @@ view: fruit_basket {
     value_format_name: usd
     sql: ${price} ;;  }
 
-  # dimension: priceper_pound {
-  #   type: number
-  #   sql: ${TABLE}.PriceperPound ;;
-  # }
+  dimension: priceper_pound {
+    label: "@{priceper_pound}"
+    type: number
+    sql: ${TABLE}.PriceperPound ;;
+  }
 
   # dimension: weight {
   #   type: number
